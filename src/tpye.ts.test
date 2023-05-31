@@ -1,0 +1,69 @@
+// tpye을 생성하는 2가지 방법
+
+
+const user: User = {
+    name: '서재준',
+    age: 19,
+    live: true,
+    gender: '남',
+}
+
+type Gender = '남' | '여';
+
+interface User {
+    name: string;
+    age: number;
+    live: boolean;
+    gender: Gender;
+}
+
+
+interface SJJ extends User {
+    gf?: boolean;
+}
+
+const extends_user: SJJ = {
+    name: '서재준',
+    age: 19,
+    live: true,
+    gender: '남',
+    // gf: false
+}
+
+// 1
+type MyType = true;
+type MyType2 = false;
+type MyTypes = {
+    data: boolean;
+}
+type MyTypes2 = {
+    data: null;
+}
+type MyAllType = MyTypes & MyTypes2;
+
+// const myTest: MyAllType = {
+//     data: true,
+//     data2: null
+// };
+
+// 2
+interface MyInterface {
+    data: string;
+}
+
+// ts에서의 type들
+
+type Test = 
+| (any)[]
+| Array<(any)> // 배열<>
+| object // {}
+| number // 숫자
+| string // 문자
+| boolean // true or false
+| undefined // undefined
+| null // null
+| never // return type 이 없거나 type이 없을 때 사용한다.  
+| void
+| any // 만능 (모든 게 다 들어갈 수 있음)
+| true
+| false
