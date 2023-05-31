@@ -23,7 +23,8 @@ export const Input = styled.input`
 
     `;  
 
-export const Button = styled.button`
+export const Button = styled.button<{backgroundColor?: string }>`
+${({ backgroundColor}) => `backgroundColor: ${backgroundColor};`}
     background-color:#0a0a23;
     color: #fff;
     border:none; 

@@ -83,7 +83,7 @@ function App() {
             <Button onClick={deleteTodo}>삭제</Button>
             {isEdit ? (
               <>
-                <Button onClick={cancelEdit}>취소</Button>
+                <Button onClick={cancelEdit} backgroundColor="skyblue">취소</Button>
                 <Button>저장</Button>
               </>
             ) : (
